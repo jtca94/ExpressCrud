@@ -146,6 +146,10 @@
   }
 
   function editarCancion(id) {
+    if (!id) {
+      alert("Debes elegir una canción primero");
+      return;
+    }
     axios
       .put(url + "/" + id, {
         id,
